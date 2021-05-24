@@ -104,7 +104,6 @@ class ButtonLeftIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    CelestialImage celestialImage = new CelestialImage();
     return SizedBox(
       width: width,
       height: 57,
