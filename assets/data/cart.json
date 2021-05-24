@@ -1,0 +1,31 @@
+[
+    {
+      "productCode": "value1",
+      "productName": "Organic Bananas",
+      "weight": "7pcs,priceg",
+      "price":"1000",
+      "quantity":"1000"
+    },
+    {
+      "productCode": "value1",
+      "productName": "Apple",
+      "weight": "7pcs,priceg",
+      "price":"1000",
+      "quantity":"1000"
+    },
+    {
+      "productCode": "value1",
+      "productName": "Bell Pepper Red",
+      "weight": "7pcs,priceg",
+      "price":"1000",
+      "quantity":"1000"
+    },
+    {
+      "productCode": "value1",
+      "productName": "Ginger",
+      "weight": "7pcs,priceg",
+      "price":"1000",
+      "quantity":"1000"
+    }
+    
+  ]
