@@ -26,7 +26,7 @@ class BestSellingController extends GetxController {
       isLoading(true);
       final String response =
           await rootBundle.loadString('assets/data/bestproduct.json');
-      datas.value = bestSellingProductFromJson(response);
+      datas(bestSellingProductFromJson(response));
     } catch (exception) {
       // showSnackBar("Exception", exception.toString(), Colors.red);
     } finally {

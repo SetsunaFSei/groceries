@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:groceries/model/ExlusiveProduct.dart';
 import 'package:groceries/model/Product.dart';
 
 class FavoriteController extends GetxController {
@@ -27,7 +26,7 @@ class FavoriteController extends GetxController {
       isLoading(true);
       final String response =
           await rootBundle.loadString('assets/data/product.json');
-      datas.value = productFromJson(response);
+      datas(productFromJson(response));
     } catch (exception) {
       // showSnackBar("Exception", exception.toString(), Colors.red);
     } finally {

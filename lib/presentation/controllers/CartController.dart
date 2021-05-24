@@ -1,7 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:groceries/model/Cart.dart';
-import 'package:groceries/model/ExlusiveProduct.dart';
 
 class CartController extends GetxController {
   // final productGroups = <Body>[].obs;
@@ -28,7 +27,7 @@ class CartController extends GetxController {
       isLoading(true);
       final String response =
           await rootBundle.loadString('assets/data/cart.json');
-      datas.value = cartFromJson(response);
+      datas(cartFromJson(response));
     } catch (exception) {
       // showSnackBar("Exception", exception.toString(), Colors.red);
     } finally {

@@ -19,7 +19,7 @@ class SelectLocationPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColor.backgroundColorLight,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -59,19 +59,30 @@ class SelectLocationPage extends StatelessWidget {
             ),
             Text(AppString.zone, style: AppStyle.labelSubtitle),
             Flexible(
-                flex: 2, child: celestialDropdown.celestialDropdown("One")),
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: celestialDropdown.celestialDropdown("One"),
+                )),
             Text(AppString.area, style: AppStyle.labelSubtitle),
             Flexible(
-                flex: 2, child: celestialDropdown.celestialDropdown("One")),
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: celestialDropdown.celestialDropdown("One"),
+                )),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 30.0),
-              child: PrimaryButton(
-                  text: AppString.submit,
-                  color: AppColor.backgroundColorDark,
-                  onPressed: () {
-                    locationController.onSubmitPress();
-                    // loginController.onLoginPress();
-                  }),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: PrimaryButton(
+                    text: AppString.submit,
+                    color: AppColor.backgroundColorDark,
+                    onPressed: () {
+                      locationController.onSubmitPress();
+                      // loginController.onLoginPress();
+                    }),
+              ),
             ),
           ],
         ),

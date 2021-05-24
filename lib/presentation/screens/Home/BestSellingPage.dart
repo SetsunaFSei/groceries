@@ -33,7 +33,7 @@ class BestSellingPage extends StatelessWidget {
             ],
           ),
           Container(
-            height: 250,
+            height: 300,
             child: Obx(() => ListView.builder(
                 itemCount: bestSellingController.datas.length ?? 0,
                 shrinkWrap: true,
@@ -47,7 +47,7 @@ class BestSellingPage extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Card(
-                        elevation: 0.5,
+                        elevation: 0.4,
                         child: Container(
                           width: 250,
                           child: Padding(
@@ -59,7 +59,7 @@ class BestSellingPage extends StatelessWidget {
                                   padding:
                                       const EdgeInsets.symmetric(vertical: 5.0),
                                   child: celestialImage.celestialImage(
-                                      AppImage.product, 60, 100),
+                                      AppImage.product, 120, 60),
                                 ),
                                 Padding(
                                   padding:

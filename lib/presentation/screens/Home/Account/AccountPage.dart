@@ -16,7 +16,7 @@ class AccountPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: AppColor.backgroundColorLight,
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -25,14 +25,20 @@ class AccountPage extends StatelessWidget {
                 children: [
                   Flexible(
                       flex: 2,
-                      child: celestialImage.celestialImage(
-                          AppImage.product, 100, 100)),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: celestialImage.celestialImage(
+                            AppImage.product, 100, 100),
+                      )),
                   Flexible(
                     flex: 10,
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(AppString.userEmail),
-                        Text(AppString.emailName),
+                        Text(AppString.userEmail,
+                            style: AppStyle.labelSubtitle3),
+                        Text(AppString.emailName,
+                            style: AppStyle.labelSubtitleNormal),
                       ],
                     ),
                   ),
@@ -43,8 +49,11 @@ class AccountPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      celestialImage.celestialIcon(
-                          AppIcon.bag, 20, AppColor.blackColor2),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: celestialImage.celestialIcon(
+                            AppIcon.bag, 20, AppColor.blackColor2),
+                      ),
                       Text("Order", style: AppStyle.labelAcountList),
                     ],
                   ),
@@ -61,8 +70,11 @@ class AccountPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      celestialImage.celestialIcon(
-                          AppIcon.detail, 20, AppColor.blackColor2),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: celestialImage.celestialIcon(
+                            AppIcon.detail, 20, AppColor.blackColor2),
+                      ),
                       Text("MyDetail", style: AppStyle.labelAcountList),
                     ],
                   ),
@@ -79,8 +91,11 @@ class AccountPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      celestialImage.celestialIcon(
-                          AppIcon.location, 20, AppColor.blackColor2),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: celestialImage.celestialIcon(
+                            AppIcon.location, 20, AppColor.blackColor2),
+                      ),
                       Text("Delivery Address", style: AppStyle.labelAcountList),
                     ],
                   ),
@@ -97,8 +112,11 @@ class AccountPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      celestialImage.celestialIcon(
-                          AppIcon.payment, 20, AppColor.blackColor2),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: celestialImage.celestialIcon(
+                            AppIcon.payment, 20, AppColor.blackColor2),
+                      ),
                       Text("Payment Methods", style: AppStyle.labelAcountList),
                     ],
                   ),
@@ -115,8 +133,11 @@ class AccountPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      celestialImage.celestialIcon(
-                          AppIcon.promo, 20, AppColor.blackColor2),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: celestialImage.celestialIcon(
+                            AppIcon.promo, 20, AppColor.blackColor2),
+                      ),
                       Text("Promo Card", style: AppStyle.labelAcountList),
                     ],
                   ),
@@ -133,8 +154,11 @@ class AccountPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      celestialImage.celestialIcon(
-                          AppIcon.bell, 20, AppColor.blackColor2),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: celestialImage.celestialIcon(
+                            AppIcon.bell, 20, AppColor.blackColor2),
+                      ),
                       Text("Notification", style: AppStyle.labelAcountList),
                     ],
                   ),
@@ -151,8 +175,11 @@ class AccountPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      celestialImage.celestialIcon(
-                          AppIcon.help, 20, AppColor.blackColor2),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: celestialImage.celestialIcon(
+                            AppIcon.help, 20, AppColor.blackColor2),
+                      ),
                       Text("Help", style: AppStyle.labelAcountList),
                     ],
                   ),
@@ -169,8 +196,11 @@ class AccountPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      celestialImage.celestialIcon(
-                          AppIcon.about, 20, AppColor.blackColor2),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: celestialImage.celestialIcon(
+                            AppIcon.about, 20, AppColor.blackColor2),
+                      ),
                       Text(
                         "About",
                         style: AppStyle.labelAcountList,
@@ -190,10 +220,10 @@ class AccountPage extends StatelessWidget {
               ),
               ButtonLeftIcon(
                   icon: AppIcon.exit,
-                  text: AppString.loginGoogle,
+                  text: AppString.logout,
                   textStyle: AppStyle.labelButtonLight,
                   borderColor: AppColor.backgroundIconColorDark,
-                  color: AppColor.whiteColor,
+                  color: AppColor.backgroundColorDark,
                   onPressed: () {
                     // signInController.onSVerificationPress();
                   }),

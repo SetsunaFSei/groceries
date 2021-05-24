@@ -15,7 +15,6 @@ class GroceriesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isLoadingVertical = false;
     GroceriesController groceriesController = Get.put(GroceriesController());
     CelestialImage celestialImage = CelestialImage();
 
@@ -61,7 +60,7 @@ class GroceriesPage extends StatelessWidget {
                 flex: 1,
                 child: Card(
                   color: AppColor.greenBackground,
-                  elevation: 0.5,
+                  elevation: 0.4,
                   child: Container(
                     width: 300,
                     child: Padding(
@@ -79,7 +78,7 @@ class GroceriesPage extends StatelessWidget {
             ],
           ),
           Container(
-            height: 250,
+            height: 300,
             child: Obx(() => ListView.builder(
                 itemCount: groceriesController.datas.length ?? 0,
                 shrinkWrap: true,
@@ -92,7 +91,7 @@ class GroceriesPage extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Card(
-                        elevation: 0.5,
+                        elevation: 0.4,
                         child: Container(
                           width: 250,
                           child: Padding(
@@ -104,7 +103,7 @@ class GroceriesPage extends StatelessWidget {
                                   padding:
                                       const EdgeInsets.symmetric(vertical: 5.0),
                                   child: celestialImage.celestialImage(
-                                      AppImage.product, 60, 100),
+                                      AppImage.product, 120, 60),
                                 ),
                                 Padding(
                                   padding:

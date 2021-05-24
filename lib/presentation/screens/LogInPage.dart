@@ -26,7 +26,7 @@ class LoginPage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 30.0),
-                child: celestialImage.celestialImage(AppIcon.carrot, 55, 55),
+                child: celestialImage.celestialImage(AppIcon.carrot, 60, 60),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
@@ -57,7 +57,7 @@ class LoginPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: PrimaryButton(
-                    text: AppString.submit,
+                    text: AppString.login,
                     color: AppColor.backgroundColorDark,
                     onPressed: () {
                       loginController.onSubmitPress();
@@ -69,7 +69,7 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(AppString.dontHaveAccount,
-                        style: AppStyle.labelSubtitle),
+                        style: AppStyle.labelDontHaveAccount),
                     InkWell(
                         onTap: () {
                           loginController.onSignUpPress();

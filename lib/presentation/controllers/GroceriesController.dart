@@ -26,7 +26,7 @@ class GroceriesController extends GetxController {
       isLoading(true);
       final String response =
           await rootBundle.loadString('assets/data/groceriesproduct.json');
-      datas.value = groceriesProductFromJson(response);
+      datas(groceriesProductFromJson(response));
     } catch (exception) {
       // showSnackBar("Exception", exception.toString(), Colors.red);
     } finally {

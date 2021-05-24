@@ -36,14 +36,18 @@ class OnBordingPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 120.0),
+              padding: const EdgeInsets.only(
+                  left: 120.0, right: 120.0, bottom: 20.0, top: 20),
               child: Text(AppString.wellcome,
                   textAlign: TextAlign.center, style: AppStyle.labelWellcome),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 59.0),
-              child: Text(AppString.groceriesMoto,
-                  textAlign: TextAlign.center, style: AppStyle.labelSubtitle),
+              child: Text(
+                AppString.groceriesMoto,
+                textAlign: TextAlign.center,
+                style: AppStyle.labelSubtitle,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(

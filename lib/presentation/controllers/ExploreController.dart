@@ -27,7 +27,7 @@ class ExplorerController extends GetxController {
       isLoading(true);
       final String response =
           await rootBundle.loadString('assets/data/product.json');
-      datas.value = productFromJson(response);
+      datas(productFromJson(response));
     } catch (exception) {
       // showSnackBar("Exception", exception.toString(), Colors.red);
     } finally {

@@ -5,7 +5,6 @@ import 'package:groceries/presentation/misc/AppColor.dart';
 import 'package:groceries/presentation/misc/AppIcon.dart';
 import 'package:groceries/presentation/misc/AppString.dart';
 import 'package:groceries/presentation/misc/AppStyle.dart';
-import 'package:groceries/presentation/widget/CelestialAppbar.dart';
 import 'package:groceries/presentation/widget/CelestialButton.dart';
 import 'package:groceries/presentation/widget/CelestialImage.dart';
 import 'package:groceries/presentation/widget/CelestialText.dart';
@@ -15,7 +14,6 @@ class VerificationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     CelestialText celestialText = CelestialText();
     TextEditingController emailText = TextEditingController(text: '');
-    CelestialAppBar celestialAppBar = new CelestialAppBar();
     CelestialImage celestialImage = CelestialImage();
     VerificationController verificationController =
         Get.put(VerificationController());

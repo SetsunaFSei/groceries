@@ -3,7 +3,44 @@ import 'package:groceries/presentation/misc/AppColor.dart';
 
 class AppStyle {
   static const TextStyle labelWellcome = TextStyle(
-      fontSize: 48, fontWeight: FontWeight.w600, color: AppColor.whiteColor);
+    fontSize: 48,
+    fontWeight: FontWeight.w600,
+    color: AppColor.whiteColor,
+  );
+  static const TextStyle labelSosmed = TextStyle(
+      fontSize: 14, fontWeight: FontWeight.w600, color: AppColor.greyColor2);
+  static const TextStyle labelDontHaveAccount = TextStyle(
+      fontSize: 14, fontWeight: FontWeight.w600, color: AppColor.blackColor2);
+
+  static const TextStyle labelSubtitle = TextStyle(
+      fontSize: 16, fontWeight: FontWeight.w600, color: AppColor.greyColor);
+
+  static const TextStyle labelSubtitle2 = TextStyle(
+      fontSize: 14, fontWeight: FontWeight.w600, color: AppColor.blackColor2);
+
+  static const TextStyle labelSubtitle4 = TextStyle(
+      fontSize: 14, fontWeight: FontWeight.w600, color: AppColor.blackColor2);
+
+  static const TextStyle labelSubtitle5 =
+      TextStyle(fontSize: 13, color: AppColor.greyColor3);
+
+  static const TextStyle labelSubtitleNormal =
+      TextStyle(fontSize: 16, color: AppColor.greyColor3);
+
+  static const TextStyle labelSubtitle3 = TextStyle(
+      fontSize: 14, fontWeight: FontWeight.w600, color: AppColor.blackColor3);
+
+  static const TextStyle labelLocation = TextStyle(
+      fontSize: 18, fontWeight: FontWeight.w600, color: AppColor.greyColor4);
+
+  static const TextStyle labelProductName2 = TextStyle(
+      fontSize: 18, fontWeight: FontWeight.w600, color: AppColor.blackColor2);
+
+  static const TextStyle header1 = TextStyle(
+      fontSize: 26, fontWeight: FontWeight.w600, color: AppColor.blackColor);
+
+  static const TextStyle header2 =
+      TextStyle(fontSize: 24, color: AppColor.blackColor2);
 
   // static const TextStyle labelButtonWhite =
   //     TextStyle(fontSize: 18, color: AppColor.whiteColor);
@@ -13,38 +50,12 @@ class AppStyle {
 
   // static const TextStyle labelSmall =
   //     TextStyle(fontSize: 16, color: AppColor.whiteColor);
-  static const TextStyle labelSubtitleNormal = TextStyle(
-      // fontFamily: 'Gilroy-Medium',
-      fontSize: 16,
-      color: AppColor.greyColor);
-
-  static const TextStyle labelSubtitle = TextStyle(
-      // fontFamily: 'Gilroy-Medium',
-      fontSize: 16,
-      // height: 5,
-      fontWeight: FontWeight.w600,
-      color: AppColor.greyColor);
 
   // static const TextStyle labelSubtitleNormal = TextStyle(
   //     // fontFamily: 'Gilroy-Medium',
   //     fontSize: 16,
   //     fontWeight: FontWeight.w600,
   //     color: AppColor.greyColor);
-
-  static const TextStyle labelSubtitle2 = TextStyle(
-      // fontFamily: 'Gilroy-Medium',
-      fontSize: 14,
-      fontWeight: FontWeight.w600,
-      color: AppColor.blackColor2);
-
-  static const TextStyle labelSubtitle3 = TextStyle(
-      // fontFamily: 'Gilroy-Medium',
-      fontSize: 14,
-      fontWeight: FontWeight.w600,
-      color: AppColor.blackColor3);
-
-  static const TextStyle header1 = TextStyle(
-      fontSize: 26, fontWeight: FontWeight.w600, color: AppColor.blackColor);
 
   static const TextStyle labelButtonDark = TextStyle(
       fontSize: 18, fontWeight: FontWeight.w600, color: AppColor.whiteColor);
@@ -62,13 +73,16 @@ class AppStyle {
       color: AppColor.backgroundIconColorDark);
 
   static const TextStyle labelPrice = TextStyle(
-      fontSize: 18, fontWeight: FontWeight.w600, color: AppColor.blackColor3);
+      fontSize: 18, fontWeight: FontWeight.w600, color: AppColor.blackColor2);
 
   static const TextStyle labelProduct =
       TextStyle(fontSize: 16, color: AppColor.blackColor2);
 
   static const TextStyle labelWeight =
       TextStyle(fontSize: 14, color: AppColor.blackColor3);
+
+  static const TextStyle labelWeight2 =
+      TextStyle(fontSize: 16, color: AppColor.blackColor3);
 
   static const TextStyle labelAcountList = TextStyle(
       fontSize: 18, fontWeight: FontWeight.w600, color: AppColor.blackColor2);

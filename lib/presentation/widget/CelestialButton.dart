@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:groceries/presentation/misc/AppColor.dart';
 import 'package:groceries/presentation/misc/AppStyle.dart';
 import 'package:groceries/presentation/widget/CelestialImage.dart';
 
@@ -20,42 +19,70 @@ class PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      height: 67,
-      child: Container(
-        decoration: textStyle != AppStyle.labelButtonLight
-            ? ShapeDecoration(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(8),
-                  ),
-                  side: BorderSide(
-                    width: 2,
-                    color: AppColor.backgroundColorDark,
-                  ),
-                ),
-              )
-            : null,
-        child: new RaisedButton(
-            onPressed: onPressed,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(
-              Radius.circular(8),
-            )),
-            color: color,
-            autofocus: true,
-            clipBehavior: Clip.none,
-            elevation: 1,
-            hoverElevation: 1,
-            child: Text(
-              text,
-              style: textStyle,
-            )),
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        primary: Colors.red, // background
+        onPrimary: Colors.white, // foreground
       ),
+      onPressed: onPressed,
+      child: Text(text),
     );
   }
 }
+
+// class PrimaryButton extends StatelessWidget {
+//   PrimaryButton({
+//     @required this.onPressed,
+//     this.text,
+//     this.color,
+//     this.textStyle = AppStyle.labelButtonLight,
+//     this.width = double.infinity,
+//   });
+
+//   final GestureTapCallback onPressed;
+//   final String text;
+//   final Color color;
+//   final TextStyle textStyle;
+//   final double width;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+//       width: width,
+//       height: 67,
+//       child: Container(
+//         decoration: textStyle != AppStyle.labelButtonLight
+//             ? ShapeDecoration(
+//                 shape: RoundedRectangleBorder(
+//                   borderRadius: BorderRadius.all(
+//                     Radius.circular(8),
+//                   ),
+//                   side: BorderSide(
+//                     width: 2,
+//                     color: AppColor.backgroundColorDark,
+//                   ),
+//                 ),
+//               )
+//             : null,
+//         child: new RaisedButton(
+//             onPressed: onPressed,
+//             shape: RoundedRectangleBorder(
+//                 borderRadius: BorderRadius.all(
+//               Radius.circular(8),
+//             )),
+//             color: color,
+//             autofocus: true,
+//             clipBehavior: Clip.none,
+//             elevation: 1,
+//             hoverElevation: 1,
+//             child: Text(
+//               text,
+//               style: textStyle,
+//             )),
+//       ),
+//     );
+//   }
+// }
 
 class ButtonLeftIcon extends StatelessWidget {
   ButtonLeftIcon({
@@ -82,52 +109,27 @@ class ButtonLeftIcon extends StatelessWidget {
       width: width,
       height: 57,
       child: Container(
-        decoration: textStyle != AppStyle.labelButtonLight
-            ? ShapeDecoration(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(16),
+          decoration: textStyle != AppStyle.labelButtonLight
+              ? ShapeDecoration(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(16),
+                    ),
+                    side: BorderSide(
+                      width: 2,
+                      color: borderColor,
+                    ),
                   ),
-                  side: BorderSide(
-                    width: 2,
-                    color: borderColor,
-                  ),
-                ),
-              )
-            : null,
-        child: new RaisedButton(
+                )
+              : null,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.red, // background
+              onPrimary: Colors.white, // foreground
+            ),
             onPressed: onPressed,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(
-              Radius.circular(8),
-            )),
-            color: color,
-            autofocus: true,
-            clipBehavior: Clip.none,
-            elevation: 1,
-            hoverElevation: 1,
-            child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  celestialImage.celestialIcon(
-                      icon, 40, AppColor.backgroundColorLight,
-                      isTint: true),
-                  Text(
-                    text,
-                    textAlign: TextAlign.center,
-                    style: textStyle,
-                  ),
-                  Text(
-                    '',
-                    textAlign: TextAlign.center,
-                    style: textStyle,
-                  ),
-                ],
-              ),
-            )),
-      ),
+            child: Text(text),
+          )),
     );
   }
 }

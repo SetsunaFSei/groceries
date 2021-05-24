@@ -35,6 +35,7 @@ class AppString {
   static final area = "Your Area";
 
   static final loging = "Loging";
+  static final login = "Login";
   static final enterEmailPassword = "Enter your emails and password";
   static final email = "Email";
   static final userName = "Username";

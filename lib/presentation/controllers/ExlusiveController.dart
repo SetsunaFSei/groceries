@@ -27,7 +27,7 @@ class ExlusiveController extends GetxController {
       isLoading(true);
       final String response =
           await rootBundle.loadString('assets/data/exlusiveproduct.json');
-      datas.value = exlusiveProductFromJson(response);
+      datas(exlusiveProductFromJson(response));
     } catch (exception) {
       // showSnackBar("Exception", exception.toString(), Colors.red);
     } finally {

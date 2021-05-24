@@ -70,7 +70,7 @@ class SignInPage extends StatelessWidget {
             Flexible(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 10.0, top: 20.0),
+                padding: const EdgeInsets.only(top: 20.0),
                 child: Text(
                   AppString.connectWithSM,
                   textAlign: TextAlign.center,
@@ -78,6 +78,14 @@ class SignInPage extends StatelessWidget {
                 ),
               ),
             ),
+            Center(
+                child: Padding(
+              padding: const EdgeInsets.only(bottom: 20.0),
+              child: Text(
+                AppString.connectWithSM,
+                style: AppStyle.labelSosmed,
+              ),
+            )),
             Flexible(
               flex: 1,
               child: Padding(

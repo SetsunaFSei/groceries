@@ -8,7 +8,12 @@ class AppColor {
   static const Color iconColor = Colors.white;
   static const Color textNormal = Colors.white;
 
-  // static final greyColor = Color(0xFFFCFCFC);
+  // static const Color greyColor = Color(0xFFFFCFCFC[7]);
+  static const Color greyColor = Color.fromRGBO(252, 252, 252, 0.7);
+  static const Color greyColor2 = Color(0xFF828282);
+  static const Color greyColor3 = Color(0xFF7C7C7C);
+  static const Color greyColor4 = Color(0xFF4C4F4D);
+
   static const Color backgroundColorDark = Color(0xFF53B175);
   static const Color backgroundColorLight = Color(0xFFFFFFFF);
   static const Color backgroundIconColorLight = Color(0xFF030303);
@@ -17,7 +22,7 @@ class AppColor {
   static const Color blackColor = Color(0xFF030303);
   static const Color blackColor2 = Color(0xFF181725);
   static const Color blackColor3 = Color(0xFF7C7C7C);
-  static const Color greyColor = Color(0xFF828282);
+
   static const Color googleBackgroundColor = Color(0xFF5383EC);
   static const Color facebookBackgroundColor = Color(0xFF4A66AC);
   static const Color buttonIconLabel = Color(0xFFFFF9FF);

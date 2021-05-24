@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:groceries/presentation/misc/AppColor.dart';
 import 'package:groceries/presentation/misc/AppIcon.dart';
 

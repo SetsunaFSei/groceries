@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:groceries/presentation/controllers/LocationController.dart';
 import 'package:groceries/presentation/controllers/SignUpController.dart';
 import 'package:groceries/presentation/misc/AppColor.dart';
 import 'package:groceries/presentation/misc/AppIcon.dart';
@@ -64,9 +63,12 @@ class SignUpPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: Row(
                   children: [
-                    Text(
-                      AppString.policy,
-                      style: AppStyle.labelSubtitle2,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
+                      child: Text(
+                        AppString.policy,
+                        style: AppStyle.labelSubtitle4,
+                      ),
                     ),
                     Text(AppString.term, style: AppStyle.labelAction2),
                   ],
@@ -75,7 +77,7 @@ class SignUpPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: PrimaryButton(
-                    text: AppString.getStarted,
+                    text: AppString.signUp,
                     color: AppColor.backgroundColorDark,
                     onPressed: () {
                       signUpController.onSubmitPress();

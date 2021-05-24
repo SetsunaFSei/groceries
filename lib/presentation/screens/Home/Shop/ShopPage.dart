@@ -9,7 +9,6 @@ import 'package:groceries/presentation/screens/Home/BestSellingPage.dart';
 import 'package:groceries/presentation/screens/Home/GroceriesPage.dart';
 import 'package:groceries/presentation/widget/CelestialCarousel.dart';
 import 'package:groceries/presentation/widget/CelestialImage.dart';
-import 'package:groceries/presentation/widget/CelestialNavbar.dart';
 import 'package:groceries/presentation/widget/CelestialText.dart';
 
 import '../ExluciveOfferPage.dart';
@@ -26,7 +25,7 @@ class ShopPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: AppColor.backgroundColorLight,
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -39,32 +38,45 @@ class ShopPage extends StatelessWidget {
                         AppIcon.exclude, 30, AppColor.blackColor2),
                     Text(
                       AppString.city,
-                      style: AppStyle.labelSubtitle,
+                      style: AppStyle.labelLocation,
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Flexible(
-                        flex: 11,
-                        child: celestialText.celestialTextField("", emailText)),
-                    Flexible(
-                      flex: 1,
-                      child: InkWell(
-                        onTap: () {
-                          homeController.onSearchPress();
-                        },
-                        child: celestialImage.celestialIcon(
-                            AppIcon.search, 20, AppColor.blackColor2),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Flexible(
+                          flex: 11,
+                          child:
+                              celestialText.celestialTextField("", emailText)),
+                      Flexible(
+                        flex: 1,
+                        child: InkWell(
+                          onTap: () {
+                            homeController.onSearchPress();
+                          },
+                          child: celestialImage.celestialIcon(
+                              AppIcon.search, 20, AppColor.blackColor2),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 CelestialCoursel(),
-                ExluciveOfferPage(),
-                BestSellingPage(),
-                GroceriesPage(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10.0),
+                  child: ExluciveOfferPage(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10.0),
+                  child: BestSellingPage(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10.0),
+                  child: GroceriesPage(),
+                ),
               ],
             ),
           ),
